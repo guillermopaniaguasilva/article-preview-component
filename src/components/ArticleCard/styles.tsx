@@ -9,6 +9,14 @@ export const Container = styled.div`
   background-color: ${COLORS.WHITE};
   border-radius: 8px;
   box-shadow: 0px 40px 40px -10px ${COLORS.LIGHT_GRAYISH_BLUE};
+
+  @media only screen and (min-width: 600px) {
+    width: 730px;
+    height: 280px;
+    display: flex;
+    margin-right: 40px;
+    position: relative;
+  }
 `;
 
 export const Content = styled.div`
@@ -20,6 +28,15 @@ export const Image = styled.img`
   height: 200px;
   border-top-right-radius: 8px;
   border-top-left-radius: 8px;
+
+  @media only screen and (min-width: 600px) {
+    width: 285px;
+    height: 280px;
+    border-radius: 0;
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
+    object-fit: cover;
+  }
 `;
 
 export const Title = styled.h1`
@@ -29,6 +46,10 @@ export const Title = styled.h1`
   font-weight: 700;
   line-height: 24px;
   letter-spacing: 0.2px;
+
+  @media only screen and (min-width: 600px) {
+    margin-top: 32px;
+  }
 `;
 
 export const Summary = styled.p`
@@ -38,4 +59,8 @@ export const Summary = styled.p`
   font-weight: 500;
   line-height: 20px;
   letter-spacing: 0.12px;
+
+  @media only screen and (min-width: 600px) {
+    margin-top: 12px;
+  }
 `;

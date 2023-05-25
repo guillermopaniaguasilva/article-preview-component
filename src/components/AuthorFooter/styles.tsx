@@ -5,7 +5,11 @@ import { fadeIn } from '../../styles/animations';
 export const Container = styled.div`
   animation: ${fadeIn} 0.25s ease-in;
   display: flex;
-  margin: 32px 32px 20px 32px;
+  margin: 32px 0 20px 0;
+
+  @media only screen and (min-width: 600px) {
+    margin-top: 45px;
+  }
 `;
 
 export const Avatar = styled.img`

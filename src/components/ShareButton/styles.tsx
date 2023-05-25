@@ -21,6 +21,17 @@ export const Background = styled.div<BackgroundProps>`
   justify-content: center;
   align-items: center;
   margin-left: auto;
+
+  @media only screen and (min-width: 600px) {
+    &:hover {
+      cursor: pointer;
+      background-color: ${COLORS.DESATURATED_DARK_BLUE};
+
+      & img {
+        filter: brightness(0) invert(1);
+      }
+    }
+  }
 `;
 
 export const Image = styled.img<ImageProps>`

@@ -3,16 +3,17 @@ import ShareButton from '../ShareButton/ShareButton';
 
 type SharePaneProps = {
   onShareClick: () => void;
+  withShareButton?: boolean;
 };
 
-const SharePane = ({ onShareClick }: SharePaneProps) => {
+const SharePane = ({ onShareClick, withShareButton }: SharePaneProps) => {
   return (
     <Container>
       <Heading>Share</Heading>
       <Icon src="assets/images/icon-facebook.svg" />
       <Icon src="assets/images/icon-twitter.svg" />
       <Icon src="assets/images/icon-pinterest.svg" />
-      <ShareButton onClick={onShareClick} theme="dark" />
+      {withShareButton && <ShareButton onClick={onShareClick} theme="dark" />}
     </Container>
   );
 };

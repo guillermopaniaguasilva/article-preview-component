@@ -7,12 +7,35 @@ export const Container = styled.div`
   width: 327px;
   height: 64px;
   margin-top: 16px;
+  margin-left: -32px;
   padding-right: 32px;
   background-color: ${COLORS.VERY_DARK_GRAYISH_BLUE};
   border-bottom-right-radius: 8px;
   border-bottom-left-radius: 8px;
   display: flex;
   align-items: center;
+
+  @media only screen and (min-width: 600px) {
+    width: 248px;
+    height: 67px;
+    position: absolute;
+    bottom: 40%;
+    left: 79.5%;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px 1px var(--box-shadow);
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+      bottom: -10px;
+      left: 50%;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 10px solid ${COLORS.VERY_DARK_GRAYISH_BLUE};
+    }
+  }
 `;
 
 export const Heading = styled.p`
